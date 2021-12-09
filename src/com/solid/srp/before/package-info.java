@@ -32,6 +32,8 @@ package com.solid.srp.before;
  * - if the implementation details of draw() method needs to be changed. i.e. to use a new drawing library.
  * - if the implementation details of serialize() method need to be changed.
  *
+ * This means, the Circle class can be changed for many unrelated reasons.
+ *
  * Looking at the dependency graph and assuming more Shapes in the library, we can see that each shape Class will depend
  * on "Screen", "Printer" and "Serializer" and the Overlap class depends on the Shapes classes and therefore depends on
  * "Screen", "Printer" and "Serializer" as well even it has nothing to do with them.
