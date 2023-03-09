@@ -4,12 +4,12 @@ package com.solid.srp.after;
  * >>Single Responsibility Principle>>
  *
  * Let's restructure the dependency graph to high level modules and low level components:
- * - Overlap: knows only about on Circle
- * - Printing: knows about on Circle, Printer
- * - Drawing: knows about on Circle, Screen
- * - Serialization: knows about on Circle, Serializer
+ * - Overlap: knows only about class Circle
+ * - Printing: knows about classes Circle, Printer
+ * - Drawing: knows about classes Circle, Screen
+ * - Serialization: knows about classes Circle, Serializer
  *
- * P.S.Assume that the adjacent packages are the high level modules:
+ * P.S.Assume that the adjacent packages are the high level and low level modules:
  * - each module depends only on the dependencies it needs.
  * - the Circle class does not have dependency on the Screen, Printer or Serializer anymore and is only concerned about
  *   Circle properties and basic Geometric functions i.e. translate and rotate.
