@@ -10,7 +10,7 @@ package com.solid.isp.after;
  * - implement each interface with any strategy you want.
  * - each subtype of the base class has a data member of type -> relevant DrawStrategy interface, initialize it in the
  *   constructor.
- * - each subtype implements the draw method so that it forwards the draw call to the DrawStrategy.
+ * - each subtype implements the draw method so that it forwards the draw call to the relevant DrawStrategy.
  *
  *
  *                  [Shape]<-is a--[Square]<>------owns--------[DrawSquareStrategy]
@@ -22,7 +22,7 @@ package com.solid.isp.after;
  *         [DrawCircleStrategy]
  *           ^             ^
  *  realizes|             |realizes
- *      [ImplA]         [ImpleB]
+ *      [ImplA]         [ImplB]
  *
  *
  * - now introducing a new Shape can be done in isolation with 0 coupling with existing components. Try it out and
